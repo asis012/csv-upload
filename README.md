@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Setup
+1. Clone the project: git clone https://github.com/asis012/csv-upload.git
+2. Instal ruby and rails
+3. Install all gem files: bundle install
+4. Ru server: rails s
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Features
+1. Add the ability to upload a CSV file and insert a record in sqlite3
+2. Display the record in table form
+3. Add the ability to filter the record according to the first name
+4. Add the ability to sort the table with column
+5. Add pagination to display 10 record
+6. Add validation to show record and necessary association between tabled
+7. Add TDD using rspec framework
