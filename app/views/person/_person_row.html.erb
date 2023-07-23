@@ -1,0 +1,32 @@
+<td data-column="first-name">
+  <%= title_case(person.first_name) %>
+</td>
+
+<td data-column="last-name">
+  <%= title_case(person.last_name) %>
+</td>
+
+<td data-column="location">
+  <%= title_case(person.locations&.pluck(:name).join(", ")) %>
+</td>
+
+<td data-column="species">
+  <%= person.species %>
+</td>
+
+<td data-column="gender">
+  <%= extract_gender(person.gender) %>
+</td>
+
+<td data-column="affilations">
+  <%= person.affilations&.pluck(:name).join(", ") %>
+</td>
+
+<td data-column="weapon">
+  <%= person.weapon %>
+</td>
+
+<td data-column="vehicle">
+        <%= person.vehicle %>
+</td>
+

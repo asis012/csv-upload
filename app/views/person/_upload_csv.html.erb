@@ -1,0 +1,14 @@
+<div style="margin-top: 10px;">
+  <%= form_for @person, url: person_import_csv_path, html: { multipart: true } do |f| %>
+    <div>
+      <%= f.label :file, 'Select a CSV file to add people details:' %>
+      <br />
+      <%= f.file_field :file %>
+      <%= f.submit 'Upload CSV' %>
+    </div>
+  <% end %>
+
+  <% flash.each do |key, value| %>
+    <div class="<%= key %>"><%= value %></div>
+  <% end %>
+<div>

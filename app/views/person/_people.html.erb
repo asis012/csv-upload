@@ -1,0 +1,30 @@
+<div class="main-wrapper" style="margin-top: 100px;">
+  <%= form_tag root_path, method: :get do%>
+    <%= text_field_tag :search, params[:search], placeholder: "Search by first name", class:"mb-12" %>
+    <%= submit_tag "Search" %>
+  <% end %>
+  <table id="person_list" >
+    <thead>
+      <tr>
+        <th data-column="first-name">First Name <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="last-name">Last Name <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="location">Location <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="species">Species <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="gender">Gender <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="affilations">Affiliations <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="weapon">Weapon <i class="fa fa-sort" aria-hidden="true"></i></th>
+        <th data-column="vehicle">Vehicle <i class="fa fa-sort" aria-hidden="true"></i></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% people.each do |person| %>
+        <tr>
+          <%= render partial: 'person_row', locals: {person: person} %>
+        </tr>
+      <% end %>
+    <tbody>
+  </table>
+  <div class='f-right'>
+    <%= pagy_nav(@pagy).html_safe if @pagy.pages > 1 %>
+  </div
+<div>
