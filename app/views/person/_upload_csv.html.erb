@@ -3,7 +3,7 @@
     <div>
       <%= f.label :file, 'Select a CSV file to add people details:' %>
       <br />
-      <%= f.file_field :file %>
+      <%= f.file_field :file, accept: '.csv' %>
       <%= f.submit 'Upload CSV' %>
     </div>
   <% end %>
